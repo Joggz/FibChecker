@@ -7,11 +7,11 @@
           class="num text-black"
           name="max"
           type="number"
-          v-model="number"
+          v-model="max"
           placeholder=" 8"
         />
       </label>
-      <p class="text-whte">{{number}}</p>
+      <p class="text-whte">{{max}}</p>
       <br />
       <br />
 
@@ -30,12 +30,17 @@
     <div>
       <button
         class="bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded"
+      >Add</button>
+      <button
+        class="bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded"
       >Submit</button>
     </div>
   </main>
 </template>
 
 <script>
+import fib from '../assets/js/fib.js'
+
 export default {
   name: "Form",
 
@@ -48,6 +53,9 @@ export default {
   methods: {
     check() {
       console.log(this.number, this.randomNum);
+      console.log(Number(this.number) + 1)
+      console.log(fib(Number(this.max)))
+      // utils.fib(Number(this.number))
     }
   }
 };
