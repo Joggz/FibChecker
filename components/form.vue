@@ -30,6 +30,7 @@
     <div>
       <button
         class="bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded"
+        @click="add"
       >Add</button>
       <button
         class="bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded"
@@ -40,6 +41,7 @@
 
 <script>
 import fib from '../assets/js/fib.js'
+import add from '../assets/js/addSequence.js'
 
 export default {
   name: "Form",
@@ -52,10 +54,18 @@ export default {
   },
   methods: {
     check() {
-      console.log(this.number, this.randomNum);
-      console.log(Number(this.number) + 1)
-      console.log(fib(Number(this.max)))
-      // utils.fib(Number(this.number))
+      // console.log(this.number, this.randomNum);
+      console.log(Number(this.max) + 1)
+      // console.log(fib(Number(this.max)))
+       const result = fib(Number(this.max))
+      console.log(result)
+      // console.log(add(result))
+    },
+    add() {
+      console.log('clicked')
+      const result = fib(Number(this.max))
+      console.log(result)
+      console.log(add(result))
     }
   }
 };
