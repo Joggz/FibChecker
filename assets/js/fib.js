@@ -7,15 +7,15 @@
   while(y < num) {
       y += x;
       x = y - x;
-      if(y<=num){
+      if(y <= num){
       fibarray.push(y);
       }
   }
   
   return fibarray;
   }
-// }
 
-// utils.fib(13)
+
+
 
   export default fib
