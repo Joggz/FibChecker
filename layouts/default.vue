@@ -1,31 +1,30 @@
 <template>
   <div class="main">
-    
-    <nav class="nav bg-teal-500  h-12">
+    <nav class="nav bg-teal-500 h-12">
       <div class="logo">
-        <h1 class="text-white pt-2 pl-4 text-2xl"><span class="text-black-700 bg-red text-opacity-100">FIB</span>CHECKER</h1>
+        <h1 class="text-white pt-2 pl-4 text-2xl">
+          <span class="text-black-700 bg-red text-opacity-100">FIB</span>CHECKER
+        </h1>
       </div>
-  </nav>
+    </nav>
     <nuxt />
 
-    <footer class="nav bg-teal-500  h-12 flex justify-center">
+    <footer class="nav bg-teal-500 h-12 flex justify-center">
       <div class="footer flex justify-center align-center">
         <h3 class="text-white text-lg">&copy;laoye_jnr</h3>
       </div>
-  </footer>
+    </footer>
   </div>
 </template>
 
 
 <script>
-  
-
 </script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

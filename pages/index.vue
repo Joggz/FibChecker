@@ -21,7 +21,7 @@ import Logo from "~/components/Logo.vue";
 import Form from "~/components/form.vue";
 
 export default {
-  // el: ".container",
+  el: ".container",
   data() {
     return {
       isHidden: false

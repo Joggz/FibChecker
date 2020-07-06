@@ -28,7 +28,7 @@
       <br />
     </div>
     <div>
-      <p class="text-white mt-8"> Total Sum Fibonacci: {{sum}}</p>
+      <p class="text-white mt-8"> validated sequence : {{sum}}</p>
       <ul class="flex list">
         <span class="text-white">
           Fib Sequence:
@@ -46,7 +46,7 @@
       @click="check"
         class="bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded"
       >Submit</button>
-      <button @click="searchRandom" class="text-white bg-transparent hover:bg-blue:500 text-blue-700 font-semibold hover:text-white py-2 px-4 mt-8 border border-blue-500 hover:border-transparent rounded">SEARCH</button>
+
     </div>
   </main>
 </template>
@@ -55,6 +55,7 @@
 import fib from '../assets/js/fib.js'
 import add from '../assets/js/addSequence.js'
 import binarySearch from '../assets/js/binarySearch'
+import check from '../assets/js/check'
 
 export default {
   name: "Form",
@@ -72,29 +73,24 @@ export default {
   methods: {
     check() {
        const result = fib(Number(this.max))
-       this.sequences = result
-       console.log(this.sequences)
+       this.sequences = result.fibarray
       return this.sequences
 
       
     },
     add() {
-      console.log('clicked')
       const result = fib(Number(this.max))
-      console.log(result)
-      this.sum = add(result)
+      const sum = check(result.fibarray, Number(this.randomNum))
+      this.sum = sum
       return this.sum
     },
-    searchRandom() {
-        const randNum = Number(this.randomNum) 
-        console.log(randNum)
-        this.text = binarySearch(this.sequences, randNum)
-        return this.text
-    }
+    // searchRandom() {
+    //     const randNum = Number(this.randomNum) 
+    //     this.text = binarySearch(this.sequences, randNum)
+    //     return this.text
+    // }
   },
 
-  // computed: {
-  // }
 };
 </script>
 
